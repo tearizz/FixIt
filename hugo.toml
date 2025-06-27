@@ -50,10 +50,11 @@ mainSections = []
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Archives"
+    name = "博客与资料"
     url = "/archives/"
     # title will be shown when you hover on this menu link
     title = ""
+    # 在菜单栏中的位置
     weight = 1
     # FixIt 0.2.14 | NEW add user-defined content to menu items
     [menu.main.params]
@@ -72,7 +73,7 @@ mainSections = []
     parent = ""
     pre = ""
     post = ""
-    name = "Categories"
+    name = "文章分类"
     url = "/categories/"
     title = ""
     weight = 2
@@ -83,7 +84,7 @@ mainSections = []
     parent = ""
     pre = ""
     post = ""
-    name = "Tags"
+    name = "标签查询"
     url = "/tags/"
     title = ""
     weight = 3
@@ -296,7 +297,7 @@ mainSections = []
 # taxonomy = ["html"]
 # term = ["html", "rss"]
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+  home = ["html", "rss", "archives", "offline", "search","json"]
   page = ["html", "markdown"]
   section = ["html", "rss"]
   taxonomy = ["html"]
@@ -390,7 +391,7 @@ mainSections = []
 
   # Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["algolia", "fuse", "cse", "post-chat"]
     type = "fuse"
     # max index length of the chunked content
@@ -454,10 +455,10 @@ mainSections = []
       typeit = false
     # FixIt 0.2.12 | NEW Header subtitle config
     [params.header.subtitle]
-      # subtitle name
-      name = ""
-      # whether to use typeit animation for subtitle name
-      typeit = false
+      # subtitle name 副标题
+      name = "repeat 101 times"
+      # whether to use typeit animation for subtitle name 打字机动画
+      typeit = true
 
   # FixIt 0.2.18 | NEW Breadcrumb config
   [params.breadcrumb]
@@ -479,9 +480,9 @@ mainSections = []
   [params.footer]
     enable = true
     # whether to show copyright info
-    copyright = true
+    copyright = false
     # whether to show the author
-    author = true
+    author = false
     # Site creation year
     since = ""
     # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
@@ -493,8 +494,8 @@ mainSections = []
     # FixIt 0.3.0 | NEW whether to show Hugo and theme info
     [params.footer.powered]
       enable = true
-      hugoLogo = true
-      themeLogo = true
+      hugoLogo = false
+      themeLogo = false
     # FixIt 0.2.17 | CHANGED Site creation time
     [params.footer.siteTime]
       enable = false
@@ -563,19 +564,21 @@ mainSections = []
   [params.home]
     # Home page profile
     [params.home.profile]
-      enable = false
+      enable = true
+      # 头像 https://github.com/orgs/hugo-fixit/discussions/261#discussioncomment-4993849
+      # [params.gravatar] enable = true 
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = ""
+      gravatarEmail = "zhangtieyi19@gmail.com"
       # URL of avatar shown in home page
       avatarURL = ""
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
-      title = ""
+      title = "Tearizz"
       # subtitle shown in home page (HTML format is supported)
-      subtitle = ""
+      subtitle = "我们的存在是为了什么?"
       # whether to use typeit animation for subtitle
-      typeit = true
+      typeit = false
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
@@ -588,7 +591,7 @@ mainSections = []
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = ""
+    GitHub = "tearizz"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -675,8 +678,8 @@ mainSections = []
     Credly = ""
     Bluesky = ""
     Phone = ""
-    Email = ""
-    RSS = true
+    Email = "zhangtieyi19@gmail.com"
+    RSS = false
     # custom social links like the following
     # [params.social.twitter]
     #   id = "lruihao"
@@ -853,7 +856,7 @@ mainSections = []
   # FixIt 0.2.14 | NEW Gravatar config
   [params.gravatar]
     # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
-    enable = false
+    enable = true 
     # Gravatar host, default: "www.gravatar.com"
     host = "www.gravatar.com" # ["cravatar.cn", "gravatar.loli.net", ...]
     style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
@@ -893,7 +896,7 @@ mainSections = []
   # Get PostChat Key from my invitation link, thanks for your support!
   # https://ai.zhheo.com/console/login?InviteID=85041330
   [params.postChat]
-    enable = false
+    enable = true
     key = ""
     # How users initiate chats: ["iframe", "magic"]
     userMode = "iframe"
@@ -1000,7 +1003,7 @@ mainSections = []
     # FixIt 0.2.18 | CHANGED whether to enable lightgallery
     # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
     # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
     ruby = true
     # whether to enable the fraction extended syntax
